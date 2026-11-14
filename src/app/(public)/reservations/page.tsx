@@ -1,9 +1,9 @@
-const About = () => {
+const Reservations = () => {
   return (
     <div>
 
     </div>
 );
-};
+}
 
-export default About;
+export default Reservations;
