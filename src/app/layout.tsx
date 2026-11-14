@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Geist } from "next/font/google";
-import { cn } from "@/lib/utils";
+import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
   title: "Luzia Eventos",
@@ -16,7 +15,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="pt-ao"
       className={cn("h-full", "antialiased", "font-sans", geist.variable)}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
